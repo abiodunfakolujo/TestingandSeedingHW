@@ -32,7 +32,12 @@ class HomeController extends Controller
     public function profile()
     {
 
+
         $users = User::all();
+
+         dd($users->count());
+
+
 
         return view('profile', ['users' => $users]);
     }
