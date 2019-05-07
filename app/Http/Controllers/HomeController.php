@@ -35,6 +35,7 @@ class HomeController extends Controller
 
         $users = User::all();
 
+
          dd($users->count());
 
 
