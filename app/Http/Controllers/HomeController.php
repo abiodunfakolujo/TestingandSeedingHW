@@ -33,13 +33,15 @@ class HomeController extends Controller
     {
 
 
-        $users = User::all();
+        //$users = User::all();
+
+        $user = Auth::user();
+
+        $posts = $user->posts;
 
 
-         dd($users->count());
 
 
-
-        return view('profile', ['users' => $users]);
+        return view('profile', ['posts' => $posts]);
     }
 }
